@@ -126,7 +126,7 @@ def app():
 
     else:
             st.error("Unable to fetch data currently, please try after sometime")
-    st.subheader('Chaos is a part of evolution!')
+    st.subheader('Chaos is a part of evolution!:sunglasses:')
     pageviews=Pageviews()
     pageviews.append('dummy')
     pg_views = len(pageviews)
