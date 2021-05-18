@@ -18,7 +18,7 @@ st.title("Vacciation Slot Availability Web-App")
 
 @st.cache(allow_output_mutation=True, suppress_st_warning=True)
 def import_dataset():
-    df = pd.read_csv("Combined_List.csv")
+    df = pd.read_csv("https://raw.githubusercontent.com/prakash100198/Vaccination-Slot-Availability-Web-App/master/Combined_List.csv")
     return df
 
 def district_mapping(state_inp,df):
