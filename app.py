@@ -8,7 +8,7 @@ from copy import deepcopy
 from fake_useragent import UserAgent
 import webbrowser
 from footer_utils import image, link, layout, footer
-
+import os
 
 def app():
     temp_user_agent = UserAgent()
@@ -133,3 +133,9 @@ def app():
     footer(pg_views)
 if __name__ == "__main__":
 	app()
+	ON_HEROKU = os.environ.get('ON_HEROKU')
+	if ON_HEROKU:
+    	    # get the heroku port
+    	    port = int(os.environ.get('PORT', 17995))  # as per OP comments default is 17995
+	else:
+    	    port = 3000
