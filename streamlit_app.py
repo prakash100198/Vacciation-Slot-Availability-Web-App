@@ -350,6 +350,43 @@ elif service_input=="Miscellaneous":
     pg_views = len(pageviews)
     footer(pg_views)
 
+elif service_input=="Important Links":
+    st.title("Important Links")
+
+    @st.cache(allow_output_mutation=True, suppress_st_warning=True)
+    def import_dataset():
+        df = pd.read_csv("links.csv")
+        return df
+
+    def city_mapping(state,df):
+        return list(np.unique(list(df[df['State']==state]['City'])))
+
+    def column_mapping(df,col,value):
+        df_temp = deepcopy(df.loc[df[col] == value, :])
+        return df_temp
+
+    @st.cache(allow_output_mutation=True)
+    def Pageviews():
+        return []
+
+    li_df = import_dataset()
+    valid_states = list(np.unique(li_df.State))
+    state_input = st.sidebar.selectbox('Select State',valid_states)
+    city_input = st.sidebar.selectbox('Select City',city_mapping(state_input,li_df))
+    st.sidebar.text("More States and Cities will be\navailable in the future")
+
+    final_df = column_mapping(li_df,'State',state_input)
+    final_df = column_mapping(li_df,'City',city_input)
+    table = deepcopy(final_df)
+    table.reset_index(inplace=True, drop=True)
+    st.table(table)
+
+    st.subheader('Chaos is a part of evolution!:muscle:')
+    pageviews=Pageviews()
+    pageviews.append('dummy')
+    pg_views = len(pageviews)
+    footer(pg_views)
+
 else:
     st.title("Hang in there, as better times are ahead:muscle:")
 st.write('\n\n\n\n\n\n\nImportant Note:')
