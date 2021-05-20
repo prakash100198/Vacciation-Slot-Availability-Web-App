@@ -11,7 +11,7 @@ from footer_utils import image, link, layout, footer
 from bokeh.models.widgets import Div
 
 
-st.text('Click here to filter services by State and City')
+st.text(':point_up:Click here to filter services by State and City')
 st.write('\n\n\n')
 service_input = st.selectbox('Select Service',["","CoWin Vaccine Slot","Oxygen","Beds","Ambulance","Medicines","Miscellaneous"])
 if service_input =="CoWin Vaccine Slot":
