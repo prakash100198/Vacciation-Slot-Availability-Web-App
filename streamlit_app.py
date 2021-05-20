@@ -99,6 +99,9 @@ if service_input =="CoWin Vaccine Slot":
             st.write('\n\n')
             st.write('Nevertheless, You can search and find other Services available on this site.:wink:')
             st.write('\n\n')
+            url = 'https://www.cowin.gov.in/home'
+            if st.button('Book Slot'):
+                webbrowser.open_new_tab('https://www.cowin.gov.in/home')
             st.markdown("[Book Your Slot->](https://www.cowin.gov.in/home)")
     if (final_df is not None) and (len(final_df)):
         final_df.drop_duplicates(inplace=True)
