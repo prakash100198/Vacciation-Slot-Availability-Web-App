@@ -95,7 +95,12 @@ if service_input =="CoWin Vaccine Slot":
 
             else:
                 st.error('Nothing extracted from the API')
-
+        else:
+            st.write("As of now Center has restricted real-time data sharing through API's, you can only see the real-time data once the restrictions are removed.")
+            st.markdown("[Read more about this here->](https://government.economictimes.indiatimes.com/news/governance/centre-restricts-real-time-data-sharing-for-blocking-vaccination-slots-on-cowin-portal/82458404)")
+            st.write('\n\n')
+            st.write('Nevertheless, You can search and find other Services available on this site.:wink:')
+            
     if (final_df is not None) and (len(final_df)):
         final_df.drop_duplicates(inplace=True)
         final_df.rename(columns = col_rename,inplace=True)
