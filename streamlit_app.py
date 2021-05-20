@@ -98,12 +98,8 @@ if service_input =="CoWin Vaccine Slot":
             st.write("As of now Center has restricted real-time data sharing through API's, you can only see the real-time data once the restrictions are removed.")
             st.markdown("[Read more about this here->](https://government.economictimes.indiatimes.com/news/governance/centre-restricts-real-time-data-sharing-for-blocking-vaccination-slots-on-cowin-portal/82458404)")
             st.write('\n\n')
-            if st.button('Book Your Slot'):
-                js = "window.open('https://www.cowin.gov.in/home')"  # New tab or window
-                #js = "window.location.href = 'https://www.streamlit.io/'"  # Current tab
-                html = '<img src onerror="{}">'.format(js)
-                div = Div(text=html)
-                st.bokeh_chart(div)
+            st.write('Nevertheless, You can search and find other Services available on this site.:wink:')
+
             
             
     if (final_df is not None) and (len(final_df)):
@@ -135,7 +131,12 @@ if service_input =="CoWin Vaccine Slot":
         st.table(table)
 
     else:
-        st.write('Nevertheless, You can search and find other Services available on this site.:wink:')
+        if st.button('Book Your Slot'):
+            js = "window.open('https://www.cowin.gov.in/home')"  # New tab or window
+            #js = "window.location.href = 'https://www.streamlit.io/'"  # Current tab
+            html = '<img src onerror="{}">'.format(js)
+            div = Div(text=html)
+            st.bokeh_chart(div)
 
 
     st.subheader('Chaos is a part of evolution!:muscle:')
