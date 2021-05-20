@@ -150,7 +150,7 @@ if service_input =="CoWin Vaccine Slot":
 elif service_input=="Oxygen":
     st.write(':point_left:')
     st.text('Filter services by State and City')
-    st.write('\n\n\n')
+    st.write('\n\n')
     st.title("Oxygen Availability")
 
     @st.cache(allow_output_mutation=True, suppress_st_warning=True)
@@ -189,6 +189,9 @@ elif service_input=="Oxygen":
     footer(pg_views)
 
 elif service_input=="Beds":
+    st.write(':point_left:')
+    st.text('Filter services by State and City')
+    st.write('\n\n')
     st.title("Beds Availability")
 
     @st.cache(allow_output_mutation=True, suppress_st_warning=True)
@@ -226,6 +229,9 @@ elif service_input=="Beds":
     footer(pg_views)
 
 elif service_input=="Ambulance":
+    st.write(':point_left:')
+    st.text('Filter services by State and City')
+    st.write('\n\n')
     st.title("Ambulance Services")
 
     @st.cache(allow_output_mutation=True, suppress_st_warning=True)
@@ -263,6 +269,9 @@ elif service_input=="Ambulance":
     footer(pg_views)
 
 elif service_input=="Medicines":
+    st.write(':point_left:')
+    st.text('Filter services by State and City')
+    st.write('\n\n')
     st.title("Medicine Service")
 
     @st.cache(allow_output_mutation=True, suppress_st_warning=True)
@@ -301,6 +310,9 @@ elif service_input=="Medicines":
     footer(pg_views)
 
 elif service_input=="Miscellaneous":
+    st.write(':point_left:')
+    st.text('Filter services by State and City')
+    st.write('\n\n')
     st.title("Miscellaneous Service")
 
     @st.cache(allow_output_mutation=True, suppress_st_warning=True)
