@@ -26,7 +26,7 @@ def layout(*args):
         bottom=0,
         margin=px(0, 0, 0, 0),
         width=percent(100),
-        color="lightred",
+        color="skyblue",
         text_align="center",
         height="auto",
         opacity=6
