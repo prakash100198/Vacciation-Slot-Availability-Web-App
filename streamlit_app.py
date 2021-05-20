@@ -333,7 +333,7 @@ elif service_input=="Miscellaneous":
 
 else:
     st.title("Hang in there, as better times are ahead:muscle:")
-st.write('\n\n\nImportant Note:')
+st.write('\n\n\n\n\n\n\nImportant Note:')
 st.text('''\n
 By using the web-app, you agree and understand
 that any information provided in the website 
