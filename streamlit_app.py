@@ -180,7 +180,7 @@ elif service_input=="Oxygen":
     st.table(table)
 
     st.subheader('Chaos is a part of evolution!:muscle:')
-    st.write('\n\n\n\n\n\n')
+    st.write('\n\n\n\n\n\n\n\n')
 
     pageviews=Pageviews()
     pageviews.append('dummy')
