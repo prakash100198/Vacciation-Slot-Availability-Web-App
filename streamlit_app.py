@@ -142,6 +142,7 @@ if service_input =="CoWin Vaccine Slot":
             st.bokeh_chart(div)
             st.write('\n\n')
             st.write('\n\n')
+            st.write('\n\n\n\n')
 
     pageviews=Pageviews()
     pageviews.append('dummy')
@@ -179,6 +180,7 @@ elif service_input=="Oxygen":
     st.table(table)
 
     st.subheader('Chaos is a part of evolution!:muscle:')
+    st.write('\n\n\n\n\n\n')
 
     pageviews=Pageviews()
     pageviews.append('dummy')
@@ -216,6 +218,7 @@ elif service_input=="Beds":
     st.table(table)
 
     st.subheader('Chaos is a part of evolution!:muscle:')
+    st.write('\n\n\n\n\n\n')
     pageviews=Pageviews()
     pageviews.append('dummy')
     pg_views = len(pageviews)
@@ -252,6 +255,7 @@ elif service_input=="Ambulance":
     st.table(table)
 
     st.subheader('Chaos is a part of evolution!:muscle:')
+    st.write('\n\n\n\n\n\n')
     pageviews=Pageviews()
     pageviews.append('dummy')
     pg_views = len(pageviews)
@@ -289,6 +293,7 @@ elif service_input=="Medicines":
     st.table(table)
 
     st.subheader('Chaos is a part of evolution!:muscle:')
+    st.write('\n\n\n\n\n\n')
     pageviews=Pageviews()
     pageviews.append('dummy')
     pg_views = len(pageviews)
@@ -326,6 +331,7 @@ elif service_input=="Miscellaneous":
     st.table(table)
 
     st.subheader('Chaos is a part of evolution!:muscle:')
+    st.write('\n\n\n\n\n\n')
     pageviews=Pageviews()
     pageviews.append('dummy')
     pg_views = len(pageviews)
