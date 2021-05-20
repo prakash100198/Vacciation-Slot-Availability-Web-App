@@ -333,3 +333,6 @@ elif service_input=="Miscellaneous":
 
 else:
     st.title("Hang in there, as better times are ahead:muscle:")
+st.write('''Important Note:\n
+By using the web-app, you agree and understand that any information provided in the website on an as-is basis may change anytime without any notification or intimation. You also understand that the resources being provided are crowdsourced and TPH or any of its members do not take responsibility for the truth of any information provided in the website.''')
+People using the platform are advised to use caution and do their own research and due diligence before using the resources provided.")
