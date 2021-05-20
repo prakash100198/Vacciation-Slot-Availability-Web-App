@@ -10,9 +10,7 @@ import webbrowser
 from footer_utils import image, link, layout, footer
 from bokeh.models.widgets import Div
 
-st.write(':point_left:')
-st.text('Click here to filter services by State and City')
-st.write('\n\n\n')
+
 service_input = st.selectbox('Select Service',["","CoWin Vaccine Slot","Oxygen","Beds","Ambulance","Medicines","Miscellaneous"])
 if service_input =="CoWin Vaccine Slot":
     temp_user_agent = UserAgent()
@@ -150,6 +148,8 @@ if service_input =="CoWin Vaccine Slot":
     footer(pg_views)
 
 elif service_input=="Oxygen":
+    st.write(':point_left:')st.text('Filter services by State and City')
+    st.write('\n\n\n')
     st.title("Oxygen Availability")
 
     @st.cache(allow_output_mutation=True, suppress_st_warning=True)
