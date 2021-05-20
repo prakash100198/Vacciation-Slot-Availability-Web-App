@@ -9,7 +9,7 @@ from fake_useragent import UserAgent
 import webbrowser
 from footer_utils import image, link, layout, footer
 
-service_input = st.sidebar.selectbox('Select Service',["","CoWin Vaccine Slot","Oxygen","Beds","Ambulance","Medicines","Miscellaneous"])
+service_input = st.selectbox('Select Service',["","CoWin Vaccine Slot","Oxygen","Beds","Ambulance","Medicines","Miscellaneous"])
 if service_input =="CoWin Vaccine Slot":
     temp_user_agent = UserAgent()
     browser_header = {'User-Agent': temp_user_agent.random}
@@ -18,7 +18,7 @@ if service_input =="CoWin Vaccine Slot":
 
     @st.cache(allow_output_mutation=True, suppress_st_warning=True)
     def import_dataset():
-        df = pd.read_csv("https://raw.githubusercontent.com/prakash100198/Vaccination-Slot-Availability-Web-App/master/Combined_List.csv")
+        df = pd.read_csv("Combined_List.csv")
         return df
 
     def district_mapping(state_inp,df):
@@ -95,33 +95,38 @@ if service_input =="CoWin Vaccine Slot":
 
             else:
                 st.error('Nothing extracted from the API')
- 
-    final_df.drop_duplicates(inplace=True)
-    final_df.rename(columns = col_rename,inplace=True)
 
-    if age_input != "":
-        final_df = column_mapping(final_df,'Minimum Age Limit',age_input)
+    if (final_df is not None) and (len(final_df)):
+        final_df.drop_duplicates(inplace=True)
+        final_df.rename(columns = col_rename,inplace=True)
 
-    if fee_input != "":
-        final_df = column_mapping(final_df,'Fees',fee_input)
+        if age_input != "":
+            final_df = column_mapping(final_df,'Minimum Age Limit',age_input)
 
-    if vaccine_input != "":
-        final_df = column_mapping(final_df,'Vaccine',vaccine_input)
+        if fee_input != "":
+            final_df = column_mapping(final_df,'Fees',fee_input)
 
-    if available_input != "":
-        final_df = availability_check(final_df,'Available Capacity',0)
+        if vaccine_input != "":
+            final_df = column_mapping(final_df,'Vaccine',vaccine_input)
 
-    pincodes = list(np.unique(final_df["Pincode"].values))
-    pincode_inp = st.sidebar.selectbox('Select Pincode', [""] + pincodes)
-    if pincode_inp != "":
+        if available_input != "":
+            final_df = availability_check(final_df,'Available Capacity',0)
+
+        pincodes = list(np.unique(final_df["Pincode"].values))
+        pincode_inp = st.sidebar.selectbox('Select Pincode', [""] + pincodes)
+        if pincode_inp != "":
             final_df = column_mapping(final_df, "Pincode", pincode_inp)
 
-    final_df['Date'] = pd.to_datetime(final_df['Date'],dayfirst=True)
-    final_df = final_df.sort_values(by='Date')
-    final_df['Date'] = final_df['Date'].apply(lambda x:x.strftime('%d-%m-%y'))
-    table = deepcopy(final_df)
-    table.reset_index(inplace=True, drop=True)
-    st.table(table)
+        final_df['Date'] = pd.to_datetime(final_df['Date'],dayfirst=True)
+        final_df = final_df.sort_values(by='Date')
+        final_df['Date'] = final_df['Date'].apply(lambda x:x.strftime('%d-%m-%y'))
+        table = deepcopy(final_df)
+        table.reset_index(inplace=True, drop=True)
+        st.table(table)
+
+    else:
+        st.error("Unable to fetch data currently, please try after sometime")
+
 
     st.subheader('Chaos is a part of evolution!:muscle:')
     pageviews=Pageviews()
