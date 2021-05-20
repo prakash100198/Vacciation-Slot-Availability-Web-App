@@ -393,7 +393,7 @@ elif service_input=="Important Links":
     final_df['Links'] = final_df['Links'].apply(make_clickable)
     final_df = final_df.to_html(escape=False)
     st.write(final_df, unsafe_allow_html=True)
-    
+    st.write('\n\n\n\n\n\n')
     st.subheader('Chaos is a part of evolution!:muscle:')
     pageviews=Pageviews()
     pageviews.append('dummy')
