@@ -26,7 +26,7 @@ def layout(*args):
         bottom=0,
         margin=px(0, 0, 0, 0),
         width=percent(100),
-        color="white",
+        color="skyblue",
         text_align="center",
         height="auto",
         opacity=6
@@ -57,7 +57,7 @@ def footer(inp_views):
         "Visitors - ", str(inp_views),
         br(),
         "Developed with \u2764\ufe0f by ",
-        link("https://github.com/prakash100198", "Prakash Kumar"),
+        link("https://github.com/prakash100198", "Prakash"),
         "     ",
 
     ]
