@@ -272,7 +272,7 @@ elif service_input=="Medicines":
     st.write(':point_left:')
     st.text('Filter services by State and City')
     st.write('\n\n')
-    st.title("Medicine Service")
+    st.title("Medicine Services")
 
     @st.cache(allow_output_mutation=True, suppress_st_warning=True)
     def import_dataset():
@@ -313,7 +313,7 @@ elif service_input=="Miscellaneous":
     st.write(':point_left:')
     st.text('Filter services by State and City')
     st.write('\n\n')
-    st.title("Miscellaneous Service")
+    st.title("Miscellaneous Services")
 
     @st.cache(allow_output_mutation=True, suppress_st_warning=True)
     def import_dataset():
