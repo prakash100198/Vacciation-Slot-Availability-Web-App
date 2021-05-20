@@ -57,7 +57,7 @@ def footer(inp_views):
         "Visitors - ", str(inp_views),
         br(),
         "Developed with \u2764\ufe0f by ",
-        link("https://github.com/prakash100198", "Prakash"),
+        link("https://github.com/prakash100198/covid-resources-web-app", "Prakash"),
         "     ",
 
     ]
