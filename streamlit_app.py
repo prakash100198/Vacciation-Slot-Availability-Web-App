@@ -148,7 +148,8 @@ if service_input =="CoWin Vaccine Slot":
     footer(pg_views)
 
 elif service_input=="Oxygen":
-    st.write(':point_left:')st.text('Filter services by State and City')
+    st.write(':point_left:')
+    st.text('Filter services by State and City')
     st.write('\n\n\n')
     st.title("Oxygen Availability")
 
