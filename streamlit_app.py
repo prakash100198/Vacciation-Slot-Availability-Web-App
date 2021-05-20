@@ -140,11 +140,6 @@ if service_input =="CoWin Vaccine Slot":
             st.write('\n\n')
             st.write('\n\n')
 
-    st.write('\n\n')
-    st.write('\n\n')
-    st.write('\n\n')
-    st.write('\n\n')
-    st.subheader('Chaos is a part of evolution!:muscle:')
     pageviews=Pageviews()
     pageviews.append('dummy')
     pg_views = len(pageviews)
