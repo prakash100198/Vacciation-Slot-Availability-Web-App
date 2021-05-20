@@ -1,1 +1,1 @@
-# Vacciation-Slot-Availability-Web-App
+Covid-Resources-Web-App
