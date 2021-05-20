@@ -99,7 +99,7 @@ if service_input =="CoWin Vaccine Slot":
             st.markdown("[Read more about this here->](https://government.economictimes.indiatimes.com/news/governance/centre-restricts-real-time-data-sharing-for-blocking-vaccination-slots-on-cowin-portal/82458404)")
             st.write('\n\n')
             st.write('Nevertheless, You can search and find other Services available on this site.:wink:')
-
+            st.write('\n\n')
             
             
     if (final_df is not None) and (len(final_df)):
@@ -137,6 +137,8 @@ if service_input =="CoWin Vaccine Slot":
             html = '<img src onerror="{}">'.format(js)
             div = Div(text=html)
             st.bokeh_chart(div)
+            st.write('\n\n')
+            st.write('\n\n')
 
 
     st.subheader('Chaos is a part of evolution!:muscle:')
