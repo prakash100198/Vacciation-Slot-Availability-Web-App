@@ -380,10 +380,20 @@ elif service_input=="Important Links":
 
     final_df = column_mapping(li_df,'State',state_input)
     final_df = column_mapping(li_df,'City',city_input)
-    table = deepcopy(final_df)
-    table.reset_index(inplace=True, drop=True)
-    st.table(table)
+#     table = deepcopy(final_df)
+#     table.reset_index(inplace=True, drop=True)
+#     st.table(table)
+    def make_clickable(link):
+        # target _blank to open new window
+        # extract clickable text to display for your link
 
+        return f'<a target="_blank" href="{link}">{link}</a>'
+
+    # link is the column with hyperlinks
+    final_df['Links'] = final_df['Links'].apply(make_clickable)
+    final_df = final_df.to_html(escape=False)
+    st.write(final_df, unsafe_allow_html=True)
+    
     st.subheader('Chaos is a part of evolution!:muscle:')
     pageviews=Pageviews()
     pageviews.append('dummy')
