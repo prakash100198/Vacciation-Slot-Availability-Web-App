@@ -8,7 +8,7 @@ from copy import deepcopy
 from fake_useragent import UserAgent
 import webbrowser
 from footer_utils import image, link, layout, footer
-from bokeh.models.widgets import Div
+
 
 
 service_input = st.selectbox('Select Service',["","CoWin Vaccine Slot","Oxygen","Beds","Ambulance","Medicines","Miscellaneous","Important Links"])
