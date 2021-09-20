@@ -6,8 +6,9 @@ All covid related resources at one place ,keeping in mind the current scenaio in
   
 ## FlowChart  
 
-![proj1_flowchart](https://user-images.githubusercontent.com/54064843/133988028-7588df20-157a-44a9-9e70-402dac446e49.jpg)
-    
+![proj1_flowchart](https://user-images.githubusercontent.com/54064843/133988182-23837ee0-5621-472e-8bd9-a67d4daf2e03.jpg)
+  
+  
 ### Input-Output Screenshots 
 ![Screenshot (1939)](https://user-images.githubusercontent.com/54064843/133983923-290288d3-823d-410b-a471-ac7110ccc118.png)
 ![Screenshot (1940)](https://user-images.githubusercontent.com/54064843/133983968-f1315c13-c448-41d6-9276-370441a6eefd.png)
